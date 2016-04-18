@@ -1,6 +1,16 @@
-var React = require('react');
+const React = require('react');
 
-var Home = React.createClass({
+/* Stateless Funcional component, does not need React.createClass */
+const Home = ({
+	//props
+}) => (
+      <h2 className="text-center">
+        Search For a Functional Component
+      </h2>
+);
+
+/*
+const Home = React.createClass({
   render: function(){
     return(
       <h2 className="text-center">
@@ -9,7 +19,6 @@ var Home = React.createClass({
     )
   }
 })
-
-
+*/
 
 module.exports = Home;
