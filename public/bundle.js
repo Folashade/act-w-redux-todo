@@ -24713,19 +24713,35 @@
 
 	"use strict";
 
+	function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
+
 	var React = __webpack_require__(1);
 
-	var Home = React.createClass({
-	  displayName: "Home",
+	/* Stateless Funcional component, does not need React.createClass */
+	var Home = function Home(_ref) {
+	  _objectDestructuringEmpty(_ref);
 
-	  render: function render() {
-	    return React.createElement(
+	  return(
+	    //props
+	    React.createElement(
 	      "h2",
 	      { className: "text-center" },
-	      "Search For a Recipe"
-	    );
+	      "Search For a Functional Component"
+	    )
+	  );
+	};
+
+	/*
+	const Home = React.createClass({
+	  render: function(){
+	    return(
+	      <h2 className="text-center">
+	        Search For a Recipe
+	      </h2>
+	    )
 	  }
-	});
+	})
+	*/
 
 	module.exports = Home;
 

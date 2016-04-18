@@ -1,9 +1,9 @@
-var React = require('react');
-var Main = require('../components/main');
-var Home = require('../components/home');
-var Router = require('react-router');
-var Route = Router.Route;
-var IndexRoute = Router.IndexRoute;
+const React = require('react');
+const Main = require('../components/main');
+const Home = require('../components/home');
+const Router = require('react-router');
+const Route = Router.Route;
+const IndexRoute = Router.IndexRoute;
 
 module.exports = (
   <Route path="/" component={Main}>
