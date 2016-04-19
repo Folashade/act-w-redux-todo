@@ -56,7 +56,7 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      'Hello World'
+	      'Hello Moto'
 	    );
 	  }
 	});
