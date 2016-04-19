@@ -1,14 +1,17 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-const Main = React.createClass({
-  render: function(){
-    return (
+const Main = ({
+	intro: intro
+}) => (
       <div>
-        Change me YES
+        Title: {intro}
       </div>
-    )
-  }
-});
+	);
 
-ReactDOM.render(<Main />, document.getElementById('app'));
+
+const defaultProps = {
+	intro: 'WELCOME HOME'
+};
+
+ReactDOM.render(<Main {...defaultProps} />, document.getElementById('app'));
