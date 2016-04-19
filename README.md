@@ -29,3 +29,4 @@ unstage files : git reset HEAD -- .
 ## TODO 
 - Update to [React Router v2](https://github.com/reactjs/react-router/blob/master/upgrade-guides/v2.0.0.md)
 - Add stylesheets. Maybe [Materialize](materializecss.com/) or React based [Material UI](http://www.material-ui.com/#/components/toolbar)
+- Add Tests Chai or https://github.com/mjackson/expect
