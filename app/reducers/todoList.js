@@ -6,6 +6,10 @@ Let's setup the default CRUD Operations here */
 const TodoList = (state = [], action) => {
 	switch (action.type) {
 		case 'CREATE_NEW_ITEM':
+			if (!action.text) {
+				return state;
+			}
+
 			return [
 			...state,
 			{
