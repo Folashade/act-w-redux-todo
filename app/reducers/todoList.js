@@ -17,6 +17,7 @@ const TodoList = (state = [], action) => {
 				text: action.text,
 				completed: action.completed || false
 			}];
+
 		default:
 			return state;
 	}

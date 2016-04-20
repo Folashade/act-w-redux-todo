@@ -26,6 +26,7 @@ const Main = ({
             <TodoList
 		      todoList={todoList}
 		    />
+
       </div>
 	);
 
@@ -34,17 +35,35 @@ const Main = ({
 	contained in the Main component */
 
 const TodoList = ({ todoList }) => (
-	<ul className="list">
-		<input ref={(c) => ctx._input = c} />
-	    {todoList.map(item => (<li key={key++}>{item.text}</li>))}
-	    <button onClick={() =>
-		        store.dispatch({
-		          type: 'CREATE_NEW_ITEM',
-		          id: 2,
-		          text: ctx._input.value,
-		          completed: false           
-		        })}>+</button>
-	</ul>
+	
+	<div>
+
+		<div className="row">
+	        <div className="input-field col s6">
+				<label for="last_name"></label>
+				<input id="first_name" type="text" class="validate" ref={(c) => ctx._input = c} />
+	        </div>
+
+	        <div className="col s6">
+		    <button className="waves-effect waves-light btn" onClick={() =>
+			        store.dispatch({
+			          type: 'CREATE_NEW_ITEM',
+			          id: key++,
+			          text: ctx._input.value,
+			          completed: false           
+			        })}>+</button>
+	        </div>
+
+	    </div>
+
+	    <div className="collection">
+		    {todoList.map(item => (
+		    	<a href="#!" key={`item-${item.id}`} className="collection-item">{item.id + ' ' + item.text}
+			    	<i className="material-icons right">close</i>
+		    	</a>
+			))}
+		</div>
+	</div>
 
 );
 
