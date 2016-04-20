@@ -46,6 +46,10 @@ webpack -w rebuilds the bundle file so that you can refresh when just pointing t
 
 webpack-dev-server [--optional-flags] runs on port 8080
 
+
+## 
+return a new array with everything old, then add changes. 
+
 ## Resources
 + Babel Dependencies
   - https://www.twilio.com/blog/2015/08/setting-up-react-for-es6-with-webpack-and-babel-2.html
