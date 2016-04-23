@@ -1,8 +1,21 @@
 i.right {
     position: absolute;
-    right: 0;
+    right: 15px;
 }
 
 .collection-item {
 	text-decoration: none;
+}
+
+.inputClass{
+
+}
+
+.collection a.collection-item {
+	color: #111;
+}
+
+.collection a.collection-item.completed {
+	color: #ccc;
+    text-decoration: line-through;
 }

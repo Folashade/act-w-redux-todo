@@ -13,6 +13,9 @@ const store = createStore(todoAppReducer);
 let ctx = {}; 
 let key = 0;
 
+/* styles */
+const add = "waves-effect waves-light btn";
+const inputStyles = {'maxWidth' : '80%', 'marginRight' : '20px'};
 
 /*  Main Function :
 	gets rendered into the body of index.html. It is our top level component */
@@ -26,7 +29,6 @@ const Main = ({
             <TodoList
 		      todoList={todoList}
 		    />
-
       </div>
 	);
 
@@ -36,29 +38,26 @@ const Main = ({
 
 const TodoList = ({ todoList }) => (
 	
-	<div>
+	<div className="container">
 
-		<div className="row">
-	        <div className="input-field col s6">
-				<label for="last_name"></label>
-				<input id="first_name" type="text" class="validate" ref={(c) => ctx._input = c} />
-	        </div>
+		<input type="text" className="inputClass" style={inputStyles} ref={(c) => ctx._input = c} />
 
-	        <div className="col s6">
-		    <button className="waves-effect waves-light btn" onClick={() =>
-			        store.dispatch({
-			          type: 'CREATE_NEW_ITEM',
-			          id: key++,
-			          text: ctx._input.value,
-			          completed: false           
-			        })}>+</button>
-	        </div>
+	    <button className={add} onClick={() =>
+		        store.dispatch({
+		          type: 'CREATE_NEW_ITEM',
+		          id: key++,
+		          text: ctx._input.value,
+		          completed: false           
+		        })}>+</button>
 
-	    </div>
 
 	    <div className="collection">
 		    {todoList.map(item => (
-		    	<a href="#!" key={`item-${item.id}`} className="collection-item">{item.id + ' ' + item.text}
+		    	<a href="#!" key={`item-${item.id}`} className={`collection-item ${item.completed ? 'completed' : ''}`} onClick={() =>
+		        store.dispatch({
+		          type: 'TOGGLE_TODO',
+		          id: item.id       
+		        })}>{item.id + ' ' + item.text}
 			    	<i className="material-icons right">close</i>
 		    	</a>
 			))}
