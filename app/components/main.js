@@ -25,7 +25,9 @@ const Main = ({
 	todoList: todoList
 }) => (
       <div>
+      <div className="title-styles">
         Title: {intro}
+       </div>
             <TodoList
 		      todoList={todoList}
 		    />
@@ -58,7 +60,7 @@ const TodoList = ({ todoList }) => (
 		          type: 'TOGGLE_TODO',
 		          id: item.id       
 		        })}>{item.id + ' ' + item.text}
-			    	<i className="material-icons right">close</i>
+					<i className="material-icons right">close</i>
 		    	</a>
 			))}
 		</div>

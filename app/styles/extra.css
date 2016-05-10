@@ -19,3 +19,10 @@ i.right {
 	color: #ccc;
     text-decoration: line-through;
 }
+
+.title-styles {
+	text-align: center;
+	font-size: 1.5em;
+	font-weight:bold;
+	font-family: Arial;
+}
